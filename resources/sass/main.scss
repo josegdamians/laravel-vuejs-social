@@ -1,0 +1,86 @@
+.counters {
+    font-size: 12px;
+    text-align: center;
+}
+
+strong {
+    display: block;
+    font-size: 14px;
+}
+.status.unanswered {
+    border:none;
+}
+.status.answered {
+    border: 1px solid green;
+    color: green;
+    padding: 7px;
+}
+
+.status.answered-accepted {
+    background: green;
+    color:#fff;
+}
+
+form.form-delete {
+    display: inline;
+}
+
+.vote-controls {
+    margin-right: 30px;
+    text-align: center;
+    color: gray;
+
+    span, a {
+        display: block;
+    }
+
+    span{
+        &.votes-count {
+            font-size: 25px;
+        }
+
+        &.favorites-count {
+            font-size: 12px;
+        }
+    }
+
+    a {
+        cursor: pointer;
+        color:rgb(99, 97, 97);
+
+        &.off, &.off:hover {
+            color:rgb(145, 142, 142);
+        }
+
+        &.favorite {
+            &.favorited, &favorited:hover {
+                color: #f3ca34;
+            }
+        }
+
+        &.vote-accepted {
+            color:rgb(7, 129, 7);
+        }
+    }
+}
+
+.post {
+    padding: 20px 0;
+    &:not(:last-child) {
+        border-bottom: 1px solid rgba(#000000, .1);
+    }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .3s linear;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
